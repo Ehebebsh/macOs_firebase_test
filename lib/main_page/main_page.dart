@@ -29,7 +29,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
       );
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('로그인 성공!')),
+          const SnackBar(content: Text('로그인 성공')),
         );
         Navigator.push(
           context,
