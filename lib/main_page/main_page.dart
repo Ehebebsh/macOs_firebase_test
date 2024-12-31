@@ -51,7 +51,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('로그인')),
+      appBar: AppBar(title: Center(child: const Text('로그인'))),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

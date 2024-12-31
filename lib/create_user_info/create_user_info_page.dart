@@ -86,7 +86,7 @@ class _CreateUserInfoState extends ConsumerState<CreateUserInfo> {
                 try {
                   await FirebaseAuth.instance.createUserWithEmailAndPassword(
                     email: ref.watch(idProvider),
-                    password: ref.read(passwordProvider)
+                    password: ref.watch(passwordProvider)
                   );
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text('회원가입 성공!')),

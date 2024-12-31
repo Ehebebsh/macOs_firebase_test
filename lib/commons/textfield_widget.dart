@@ -32,7 +32,7 @@ class _CustomTextFieldState extends ConsumerState<CustomTextField> {
     _controller = TextEditingController(text: ref.read(widget.provider));
     // TextEditingController 값 변경 시 provider 상태를 업데이트
     _controller.addListener(() {
-      ref.read(widget.provider.notifier).state = _controller.text;
+      ref.read(widget.provider.notifier).state = _controller.text; // == ref.read(nameProvider.notifier).state = _controller.text;
     });
   }
 
