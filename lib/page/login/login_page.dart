@@ -31,7 +31,6 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   }
 
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +48,11 @@ class _LoginPageState extends ConsumerState<LoginPage> {
             ),
             const SizedBox(height: 16),
             ElevatedButton(
-              onPressed: () => loginController.login(context),
+              onPressed: () {
+                var email = ref.read(idProvider);
+                var password = ref.read(passwordProvider);
+                loginController.login(context: context, email: email, password: password);
+              },
               child: const Text('로그인'),
             ),
             TextButton(

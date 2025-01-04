@@ -16,7 +16,6 @@ class AddMemoDialogPage extends ConsumerStatefulWidget {
 }
 
 class _NoteDialogState extends ConsumerState<AddMemoDialogPage> {
-  DateTime? _selectedDate; // 선택한 날짜
   final TextEditingController _noteController = TextEditingController(); // 메모 입력 컨트롤러
   late AddMemoDialogPageController addMemoDialogPageController;
 
@@ -108,6 +107,8 @@ class _NoteDialogState extends ConsumerState<AddMemoDialogPage> {
         children: [
           TextButton(
             onPressed: () {
+              ref.read(dateProvider.notifier).state = null;
+              ref.read(memoProvider.notifier).state = '';
               Navigator.pop(context); // Dialog 닫기
             },
             child: const Text('취소'),

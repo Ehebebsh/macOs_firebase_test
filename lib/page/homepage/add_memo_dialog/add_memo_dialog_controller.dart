@@ -10,7 +10,7 @@ class AddMemoDialogPageController{
 
   Future<void> addMemo({
     required DateTime date,
-    required String memo
+    required String memo,
 }) async {
     try {
       // 현재 로그인된 사용자 가져오기

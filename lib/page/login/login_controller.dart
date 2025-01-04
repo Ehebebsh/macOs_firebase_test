@@ -2,8 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../create_user_info/create_user_info_data.dart';
 import '../homepage/hompage_page.dart';
 
 class LoginController {
@@ -11,12 +9,8 @@ class LoginController {
 
   LoginController({required this.ref});
 
-  Future<void> login(BuildContext context) async {
+  Future<void> login({required BuildContext context, required String email, required String password}) async {
     try {
-      // ID와 비밀번호를 읽기
-      final email = ref.read(idProvider);
-      final password = ref.read(passwordProvider);
-
       // Firebase Auth를 사용한 로그인 시도
       await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: email,
