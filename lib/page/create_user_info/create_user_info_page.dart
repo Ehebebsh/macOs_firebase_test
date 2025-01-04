@@ -3,7 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:testtest/commons/textfield_widget.dart';
-import 'package:testtest/create_user_info/create_user_info_data.dart';
+
+import 'create_user_info_data.dart';
 
 class CreateUserInfo extends ConsumerStatefulWidget {
   const CreateUserInfo({super.key});
@@ -62,6 +63,7 @@ class _CreateUserInfoState extends ConsumerState<CreateUserInfo> {
       ),
     );
   }
+
 
   Widget passwordFieldWidget(){
     return Padding(
