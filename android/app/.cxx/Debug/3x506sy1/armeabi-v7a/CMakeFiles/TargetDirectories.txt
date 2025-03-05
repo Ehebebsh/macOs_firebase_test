@@ -1,0 +1,2 @@
+C:/Users/ka062/macOs_firebase_test/android/app/.cxx/Debug/3x506sy1/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/ka062/macOs_firebase_test/android/app/.cxx/Debug/3x506sy1/armeabi-v7a/CMakeFiles/rebuild_cache.dir

@@ -7,7 +7,7 @@ import 'firebase_options.dart'; // 자동 생성된 Firebase 옵션 파일
 
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();  // Flutter 초기화 대기
+  WidgetsFlutterBinding.ensureInitialized();  // Flutter 초기화 대기12
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,  // 자동 생성된 Firebase 옵션 사용
   );
