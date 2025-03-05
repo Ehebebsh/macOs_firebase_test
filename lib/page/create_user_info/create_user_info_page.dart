@@ -16,7 +16,7 @@ class CreateUserInfo extends ConsumerStatefulWidget {
 class _CreateUserInfoState extends ConsumerState<CreateUserInfo> {
   Future<bool> _onWillPop() async {
     // 뒤로가기 버튼 동작 전에 nameProvider 초기화
-    resultValue();
+    resetValue();
     return true; // true를 반환하여 뒤로가기가 실행되도록 허용
   }
 
@@ -93,7 +93,7 @@ class _CreateUserInfoState extends ConsumerState<CreateUserInfo> {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text('회원가입 성공!')),
                   );
-                  resultValue();
+                  resetValue();
                   Navigator.of(context).pop();
                 } catch (e) {
                   if (kDebugMode) {
@@ -111,7 +111,7 @@ class _CreateUserInfoState extends ConsumerState<CreateUserInfo> {
     );
   }
 
-  void resultValue() {
+  void resetValue() {
     ref.read(nameProvider.notifier).state = ''; // 상태 초기화
     ref.read(idProvider.notifier).state  = '';
     ref.read(passwordProvider.notifier).state = '';
