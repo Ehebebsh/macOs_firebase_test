@@ -1,13 +1,17 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final memoListProvider = StateProvider<List<Memo>>((ref)=>[]);
+final weatherDataProvider = StateProvider<List<WeatherData>>((ref) => []);
 
-class Memo{
-  final String date;
-  final String memo;
+class WeatherData {
+  final String baseDate;
+  final String baseTime;
+  final String category;
+  final String obsrValue;
 
-  Memo({
-    required this.date,
-    required this.memo
-});
+  WeatherData({
+    required this.baseDate,
+    required this.baseTime,
+    required this.category,
+    required this.obsrValue,
+  });
 }
